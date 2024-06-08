@@ -22,6 +22,9 @@ jobs:
       # create a cname file with desktop.aicell.io in it
       - name: Create CNAME file
         run: echo "desktop.aicell.io" > out/CNAME
+      # add .nojekyll file to prevent jekyll from processing the site
+      - name: Create .nojekyll file
+        run: touch out/.nojekyll
       # deploy to github pages
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@4.1.5
