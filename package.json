@@ -1,5 +1,5 @@
 {
-  "name": "daedalos",
+  "name": "hypha-desktop",
   "version": "2.0.0",
   "description": "Desktop environment in the browser",
   "author": {
@@ -53,6 +53,7 @@
     "framer-motion": "^11.2.10",
     "gif.js": "^0.2.0",
     "idb": "^8.0.0",
+    "imjoy-core": "^0.14.5",
     "ini": "^4.1.3",
     "isomorphic-git": "^1.25.10",
     "libheif-js": "^1.17.1",

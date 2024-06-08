@@ -121,6 +121,17 @@ const directory: Processes = {
     lockAspectRatio: true,
     title: "js-dos v7",
   },
+  ImJoyWindow: {
+    Component: dynamic(() => import("components/apps/ImJoyWindow")),
+    backgroundColor: "#8080a0",
+    defaultSize: {
+      height: 480,
+      width: 640,
+    },
+    icon: "/System/Icons/paint.webp",
+    libs: [],
+    title: "ImJoyWindow",
+  },
   Marked: {
     Component: dynamic(() => import("components/apps/Marked")),
     backgroundColor: "#FFF",
