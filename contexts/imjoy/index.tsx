@@ -37,7 +37,7 @@ const useImJoyContextState = (): ImJoyType | undefined => {
     fs[key] = (_: any, ...args: any[]) => fileSystem[key](...args);
   }
   useEffect(() => {
-    async function createWindow(_plugin: any, config: any) {
+    async function createWindow(imjoy: any, _plugin: any, config: any) {
       let output;
       if (_plugin && _plugin.config.namespace) {
         if (_plugin.config.namespace) {
@@ -91,10 +91,12 @@ const useImJoyContextState = (): ImJoyType | undefined => {
       setImJoyCore(icore);
       const ij = new icore.ImJoy({
         imjoy_api: {
-          createWindow,
+          async createWindow(_plugin: any, config: any) {
+            return await createWindow(ij, _plugin, config);
+          },
           async showDialog(_plugin: any, config: any) {
             config.dialog = true;
-            return await createWindow(_plugin, config);
+            return await createWindow(ij, _plugin, config);
           },
           fs,
           async getcwd(_plugin: any) {
@@ -103,7 +105,6 @@ const useImJoyContextState = (): ImJoyType | undefined => {
         },
         // default_rpc_base_url: "/Program Files/imjoy/imjoy-core/",
         // default_base_frame: "/Program Files/imjoy/base_frame.html",
-        // imjoy config
       });
       console.log(ij);
       ij.start({ workspace: "default" }).then(() => {

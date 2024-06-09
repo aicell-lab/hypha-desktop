@@ -139,8 +139,8 @@ const useTerminal = ({
     if (terminal && localEcho) {
       terminal.textarea?.setAttribute("enterkeyhint", "send");
       currentOnKey = terminal.onKey(
-        ({ domEvent: { ctrlKey, code } }: OnKeyEvent) => {
-          if (ctrlKey && code === "KeyV") {
+        ({ domEvent: { ctrlKey, metaKey, code } }: OnKeyEvent) => {
+          if ((ctrlKey || metaKey) && code === "KeyV") {
             readClipboardToTerminal(localEcho);
           }
         }

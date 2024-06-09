@@ -87,9 +87,12 @@ const useMonaco = ({
 
   useEffect(() => {
     editor?.onKeyDown(async (event) => {
-      const { ctrlKey, code, keyCode } = event;
+      const { ctrlKey, metaKey, code, keyCode } = event;
 
-      if (ctrlKey && (code === "KeyS" || (keyCode as number) === 49)) {
+      if (
+        (ctrlKey || metaKey) &&
+        (code === "KeyS" || (keyCode as number) === 49)
+      ) {
         event.preventDefault();
 
         const [saveUrl, saveData] = getSaveFileInfo(url, editor);

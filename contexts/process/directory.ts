@@ -128,7 +128,7 @@ const directory: Processes = {
       height: 480,
       width: 640,
     },
-    icon: "/System/Icons/paint.webp",
+    icon: "/System/Icons/imjoy.webp",
     libs: [],
     title: "ImJoyWindow",
   },

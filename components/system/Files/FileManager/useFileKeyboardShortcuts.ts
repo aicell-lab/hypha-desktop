@@ -56,11 +56,11 @@ const useFileKeyboardShortcuts = (
       (event) => {
         if (view === "list") return;
 
-        const { ctrlKey, key, target, shiftKey } = event;
+        const { ctrlKey, metaKey, key, target, shiftKey } = event;
 
         if (shiftKey) return;
 
-        if (ctrlKey) {
+        if (ctrlKey || metaKey) {
           const lKey = key.toLowerCase();
 
           // eslint-disable-next-line default-case

@@ -281,12 +281,12 @@ const Browser: FC<ComponentProcessProps> = ({ id }) => {
                 directory === "/"
                   ? dirStats
                   : [
-                      {
-                        href: resolve(directory, ".."),
-                        icon: "back",
-                      },
-                      ...dirStats,
-                    ]
+                    {
+                      href: resolve(directory, ".."),
+                      icon: "back",
+                    },
+                    ...dirStats,
+                  ]
               );
 
               newTitle = `Index of ${directory}`;
@@ -314,9 +314,8 @@ const Browser: FC<ComponentProcessProps> = ({ id }) => {
               setIcon(id, "/System/Icons/Favicons/ipfs.webp");
             } else {
               const favicon = new Image();
-              const faviconUrl = `${
-                new URL(addressUrl).origin
-              }${FAVICON_BASE_PATH}`;
+              const faviconUrl = `${new URL(addressUrl).origin
+                }${FAVICON_BASE_PATH}`;
 
               favicon.addEventListener(
                 "error",

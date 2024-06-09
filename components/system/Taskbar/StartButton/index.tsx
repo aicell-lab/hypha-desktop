@@ -72,12 +72,12 @@ const StartButton: FC<StartButtonProps> = ({
     setPreloaded(true);
   }, []);
   const onClick = useCallback(
-    async ({ ctrlKey, shiftKey }: React.MouseEvent): Promise<void> => {
+    async ({ ctrlKey, metaKey, shiftKey }: React.MouseEvent): Promise<void> => {
       if (!preloaded) preloadIcons();
 
       toggleStartMenu();
 
-      if (ctrlKey && shiftKey) {
+      if ((ctrlKey || metaKey) && shiftKey) {
         const { default: spawnSheep } = await import("utils/spawnSheep");
 
         spawnSheep();
