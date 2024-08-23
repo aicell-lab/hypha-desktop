@@ -30,7 +30,7 @@ const nextConfig = {
   optimizeFonts: false,
   output: "export",
   productionBrowserSourceMaps: false,
-  reactStrictMode: true,
+  reactStrictMode: false,
   swcMinify: true,
   webpack: (config) => {
     config.plugins.push(
@@ -63,6 +63,6 @@ const nextConfig = {
 
 module.exports = bundleAnalyzer
   ? require("@next/bundle-analyzer")({
-      enabled: isProduction,
-    })(nextConfig)
+    enabled: isProduction,
+  })(nextConfig)
   : nextConfig;

@@ -1,10 +1,10 @@
 import styled from "styled-components";
 
-type StyledImJoyWindowProps = {
+type StyledHyphaWindowProps = {
   $loaded: boolean;
 };
 
-const StyledImJoyWindow = styled.div<StyledImJoyWindowProps>`
+const StyledHyphaWindow = styled.div<StyledHyphaWindowProps>`
   iframe {
     opacity: ${({ $loaded }) => ($loaded ? "100%" : "0%")};
     transition: opacity 0.25s ease-in;
@@ -20,4 +20,4 @@ const StyledImJoyWindow = styled.div<StyledImJoyWindowProps>`
   }
 `;
 
-export default StyledImJoyWindow;
+export default StyledHyphaWindow;

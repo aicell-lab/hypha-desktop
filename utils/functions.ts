@@ -49,6 +49,7 @@ export const getDpi = (): number => {
 export const getExtension = (url: string): string => {
   const ext = extname(url).toLowerCase();
   if (ext === ".html" && url.endsWith(".imjoy.html")) return ".imjoy.html";
+  if (ext === ".html" && url.endsWith(".hypha.html")) return ".hypha.html";
   return ext;
 };
 

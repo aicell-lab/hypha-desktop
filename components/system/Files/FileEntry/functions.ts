@@ -110,7 +110,9 @@ export const getIconFromIni = (
   });
 
 const getDefaultFileViewer = (extension: string): string => {
-  if (extension === ".imjoy.html") return "ImJoyWindow";
+  if (extension === ".imjoy.html" || extension === ".hypha.html") {
+    return "HyphaWindow";
+  }
   if (AUDIO_FILE_EXTENSIONS.has(extension)) return "VideoPlayer";
   if (VIDEO_FILE_EXTENSIONS.has(extension)) return "VideoPlayer";
   if (IMAGE_FILE_EXTENSIONS.has(extension)) return "Photos";

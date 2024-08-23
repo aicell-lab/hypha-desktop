@@ -121,16 +121,16 @@ const directory: Processes = {
     lockAspectRatio: true,
     title: "js-dos v7",
   },
-  ImJoyWindow: {
-    Component: dynamic(() => import("components/apps/ImJoyWindow")),
+  HyphaWindow: {
+    Component: dynamic(() => import("components/apps/HyphaWindow")),
     backgroundColor: "#8080a0",
     defaultSize: {
       height: 480,
       width: 640,
     },
-    icon: "/System/Icons/imjoy.webp",
+    icon: "/System/Icons/hypha-white.webp",
     libs: [],
-    title: "ImJoyWindow",
+    title: "HyphaWindow",
   },
   Marked: {
     Component: dynamic(() => import("components/apps/Marked")),
