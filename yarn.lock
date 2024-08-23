@@ -4341,8 +4341,8 @@ husky@^9.0.11:
 
 hypha-core@^0.20.28:
   version "0.20.28"
-  resolved "https://registry.yarnpkg.com/hypha-core/-/hypha-core-0.20.28.tgz#e221d1b785f639d3da38ac5446f98125539f1b05"
-  integrity sha512-BJwZhLiMUVJA806eG/jxtpFeimbi+9P/dvYvg6AejC1wktnFHixHfKuCFTJoFuqfV5BqeZRiWH0y+1HyYxTJgw==
+  resolved "https://registry.yarnpkg.com/hypha-core/-/hypha-core-0.20.28.tgz#fa024c18c918a78ca3e0b25fadc7cee02deb3e73"
+  integrity sha512-RaLJINKkEy9vXB6C5cV7ICOzDgUpBwrYXyp9fXvo52zHOxUSSzzR2yvGwcihzIVrlUnlHBsI4YHJOU9OoyEUIw==
   dependencies:
     "@babel/standalone" "^7.24.7"
     "@monaco-editor/react" "^4.6.0"
@@ -4354,7 +4354,7 @@ hypha-core@^0.20.28:
     autoprefixer "^10.4.19"
     buffer "^6.0.3"
     chai "^4.3.4"
-    hypha-rpc "^0.20.28"
+    hypha-rpc "^0.20.27"
     imjoy-rpc "^0.5.59"
     mocha "^8.4.0"
     mock-socket "^9.3.1"
@@ -4368,10 +4368,10 @@ hypha-core@^0.20.28:
     stream-browserify "^3.0.0"
     util "^0.12.5"
 
-hypha-rpc@^0.20.28:
+hypha-rpc@^0.20.27, hypha-rpc@^0.20.28:
   version "0.20.28"
-  resolved "https://registry.yarnpkg.com/hypha-rpc/-/hypha-rpc-0.20.28.tgz#1a5a99aa637e84744d64bfb330854082e8a09e1f"
-  integrity sha512-+RtVgJxuajfoZsNzCHHWExJONUKJvXnxXa46S3+H5qBbbO61GLnnXoEk/ybQzSg4UWMSlM30b8/oBtUCL0AEuQ==
+  resolved "https://registry.yarnpkg.com/hypha-rpc/-/hypha-rpc-0.20.28.tgz#fb43c2028a3c50e2d23aed6b2356ad350b3f7b59"
+  integrity sha512-62aX7ujAnvGywoY9jynElgUQjH8eXTLAzvSM06BTbOhx0BCDIT9cI9BRpySI6u/JDC9oGf8tsvz65JnEa2B+zQ==
   dependencies:
     "@msgpack/msgpack" "^2.7.1"
 
