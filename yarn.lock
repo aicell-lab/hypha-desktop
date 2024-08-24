@@ -4339,10 +4339,10 @@ husky@^9.0.11:
   resolved "https://registry.yarnpkg.com/husky/-/husky-9.0.11.tgz#fc91df4c756050de41b3e478b2158b87c1e79af9"
   integrity sha512-AB6lFlbwwyIqMdHYhwPe+kjOC3Oc5P3nThEoW/AaO2BX3vJDjWPFxYLxokUZOo6RNX20He3AaT8sESs9NJcmEw==
 
-hypha-core@^0.20.28:
-  version "0.20.28"
-  resolved "https://registry.yarnpkg.com/hypha-core/-/hypha-core-0.20.28.tgz#fa024c18c918a78ca3e0b25fadc7cee02deb3e73"
-  integrity sha512-RaLJINKkEy9vXB6C5cV7ICOzDgUpBwrYXyp9fXvo52zHOxUSSzzR2yvGwcihzIVrlUnlHBsI4YHJOU9OoyEUIw==
+hypha-core@^0.20.29:
+  version "0.20.29"
+  resolved "https://registry.yarnpkg.com/hypha-core/-/hypha-core-0.20.29.tgz#0a4350f48d513182dd7e0b26fc8acc45a12f62be"
+  integrity sha512-xxeDYHOzNTzyCOdTiZ+Hozp/eXMW+hzope3KfCQ//ARtj+dSX9tdecB/E7l7ZDS8N5HgFhiWV6ihRYd3o81/Zg==
   dependencies:
     "@babel/standalone" "^7.24.7"
     "@monaco-editor/react" "^4.6.0"
@@ -4354,7 +4354,7 @@ hypha-core@^0.20.28:
     autoprefixer "^10.4.19"
     buffer "^6.0.3"
     chai "^4.3.4"
-    hypha-rpc "^0.20.27"
+    hypha-rpc "^0.20.29"
     imjoy-rpc "^0.5.59"
     mocha "^8.4.0"
     mock-socket "^9.3.1"
@@ -4368,10 +4368,10 @@ hypha-core@^0.20.28:
     stream-browserify "^3.0.0"
     util "^0.12.5"
 
-hypha-rpc@^0.20.27, hypha-rpc@^0.20.28:
-  version "0.20.28"
-  resolved "https://registry.yarnpkg.com/hypha-rpc/-/hypha-rpc-0.20.28.tgz#fb43c2028a3c50e2d23aed6b2356ad350b3f7b59"
-  integrity sha512-62aX7ujAnvGywoY9jynElgUQjH8eXTLAzvSM06BTbOhx0BCDIT9cI9BRpySI6u/JDC9oGf8tsvz65JnEa2B+zQ==
+hypha-rpc@^0.20.29:
+  version "0.20.29"
+  resolved "https://registry.yarnpkg.com/hypha-rpc/-/hypha-rpc-0.20.29.tgz#5ed49fcea8c18c8a1a1dbbe3ed49ccd13e2739e7"
+  integrity sha512-D8hrvNlwwxd/EBc4AJ+BNjHZfkPpaEVne/min6GSM1VSmNrEIffy9JALbAY3LqMrbO4eyR9YHxosFYnWYH1NaA==
   dependencies:
     "@msgpack/msgpack" "^2.7.1"
 

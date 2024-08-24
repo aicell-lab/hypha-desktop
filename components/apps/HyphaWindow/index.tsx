@@ -1,18 +1,18 @@
 
 import { useEffect, type FC } from "react";
-import { type HyphaServer } from "hypha-core";
+import { type HyphaCore } from "hypha-core";
 import { type ComponentProcessProps } from "components/system/Apps/RenderComponent";
 import StyledHyphaWindow from "components/apps/HyphaWindow/StyledHyphaWindow";
 import useTitle from "components/system/Window/useTitle";
 import { useProcesses } from "contexts/process";
 import { useFileSystem } from "contexts/fileSystem";
-import { useHypha } from "contexts/hypha";
+import { useHyphaCore } from "contexts/hypha";
 
 
 const HyphaWindow: FC<ComponentProcessProps> = ({ id }) => {
   const { prependFileToTitle } = useTitle(id);
   const { readFile } = useFileSystem();
-  const hypha: HyphaServer | undefined = useHypha();
+  const core: HyphaCore | undefined = useHyphaCore();
   const {
     processes: { [id]: { url = "" } = {} },
     close
@@ -23,14 +23,14 @@ const HyphaWindow: FC<ComponentProcessProps> = ({ id }) => {
   }, [prependFileToTitle, url]);
 
   useEffect(() => {
-    if (!readFile || !hypha || !url) return;
+    if (!readFile || !core || !url) return;
 
     if (url.startsWith('/')) {
       close(id);
 
       readFile(url).then(async (pluginContent: Buffer) => {
         try {
-          const plugin = await hypha?.api?.loadApp({ src: pluginContent.toString() });
+          const plugin = await core?.api?.loadApp({ src: pluginContent.toString() });
 
           if (plugin?.run) {
             await plugin.run({ config: {}, data: {} });
@@ -40,7 +40,7 @@ const HyphaWindow: FC<ComponentProcessProps> = ({ id }) => {
         }
       });
     }
-  }, [readFile, hypha, url, close, id]);
+  }, [readFile, core, url, close, id]);
 
 
   const HyphaWindowStyle = { height: "100%", width: "100%" };
